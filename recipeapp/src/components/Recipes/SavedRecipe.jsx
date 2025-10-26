@@ -8,7 +8,7 @@ function SavedRecipe() {
   const id = window.localStorage.getItem("userId")
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/recipe/saved-recipe/${id}`)
+      .get(`https://mern-recipe-app-9zd0.onrender.com/recipe/saved-recipe/${id}`)
       .then((result) => {
         console.log(typeof result.data)
         setSavedRecipe(result.data)

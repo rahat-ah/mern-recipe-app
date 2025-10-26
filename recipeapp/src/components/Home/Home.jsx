@@ -5,7 +5,7 @@ function Home() {
   const [welcomeText, setWelcomeText] = useState("welcome to My recipe");
 
   axios
-    .get("http://localhost:3000/")
+    .get("https://mern-recipe-app-9zd0.onrender.com/")
     .then((result) => setWelcomeText(result.data))
     .catch((err) => console.log(err));
   return (

@@ -23,7 +23,7 @@ function Header() {
   },[userName , username])
 
   const handleLogoutBtn = () =>{
-    axios.get("http://localhost:3000/auth/logout",{ withCredentials: true })
+    axios.get("https://mern-recipe-app-9zd0.onrender.com/auth/logout",{ withCredentials: true })
           .then(result=> console.log(result.data.message))
           .catch(err=>console.log(err))
     window.localStorage.clear()

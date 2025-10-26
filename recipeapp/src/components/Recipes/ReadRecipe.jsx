@@ -8,13 +8,13 @@ function ReadRecipe() {
     const [isRecipeSaved,setIsRecipeSaved] = useState(false)
     const {id} = useParams()
     useEffect(()=>{
-      axios.get(`http://localhost:3000/recipe/read-recipe/${id}`)
+      axios.get(`https://mern-recipe-app-9zd0.onrender.com/recipe/read-recipe/${id}`)
           .then(result=> {
             setRecipe(result.data.fullRecipe)
             setCreator(result.data.creatorData)
           })
            .catch(err=>console.log(err))
-      axios.get(`http://localhost:3000/user/userdata/${window.localStorage.getItem("userId")}`)
+      axios.get(`https://mern-recipe-app-9zd0.onrender.com/user/userdata/${window.localStorage.getItem("userId")}`)
           .then(result=>{
             const savedRecipeList = result.data.userData.savedRecipeId
             const matchedId = savedRecipeList.includes(id)
@@ -29,7 +29,7 @@ function ReadRecipe() {
     },[])
 
     const handleSaveRecipe = (recipeId) =>{
-      axios.put("http://localhost:3000/recipe/save-recipe",{recipeId,userId:window.localStorage.getItem("userId")})
+      axios.put("https://mern-recipe-app-9zd0.onrender.com/recipe/save-recipe",{recipeId,userId:window.localStorage.getItem("userId")})
           .then(result=> {
             setIsRecipeSaved(true)
             console.log(result)

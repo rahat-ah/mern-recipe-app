@@ -7,7 +7,7 @@ function AllRecipe() {
   const [creatorsData,setCreatorsData] = useState([])
   useEffect(() => {
     axios
-      .get("http://localhost:3000/recipe/all-recipe")
+      .get("https://mern-recipe-app-9zd0.onrender.com/recipe/all-recipe")
       .then((result) => {
         setFullRecipe(result.data.allRecipe);
         setCreatorsData(result.data.creatorsData)
