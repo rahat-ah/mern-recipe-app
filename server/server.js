@@ -21,7 +21,7 @@ app.use('/auth/',userRouter)
 app.use('/recipe/',recipeRouter)
 app.use('/user/',userdataRouter)
 
-mongoose.connect("mongodb+srv://rahatahmedbosscomputer:myfr%3C87969008%3E@cluster0.ww3yaof.mongodb.net/recipeapp?appName=Cluster0")
+mongoose.connect("mongodb+srv://rahatahmedbosscomputer_recipe_project:myMongoRecipeApp@cluster0.jtm2nf1.mongodb.net/recipeapp?appName=Cluster0")
 
 app.get("/", (req, res) => {
   res.send("hi, hello");
