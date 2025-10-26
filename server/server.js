@@ -10,7 +10,7 @@ const userdataRouter = require("./router/userdata-route")
 
 app.use(cors(
   {
-  origin: ["http://localhost:5173"],  
+  origin: ["https://recipe-app-frontend-bogd.onrender.com"],  
   methods: ["GET", "POST","PUT"],
   credentials: true,   
 }
